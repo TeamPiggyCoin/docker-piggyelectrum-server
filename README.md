@@ -4,8 +4,8 @@ This is a trusted build on the [DockerHub repository](https://hub.docker.com/r/t
 
 To run:
 
-docker run -d -v /home/electrum/:/home/electrum -p 5001:5001 -p 5002:5002 -p 8000:8000 --name piggyelectrum-server teampiggycoin/piggyelectrum-server
+docker run -d -v /home/electrum:/home/electrum -p 54485:50001 --link piggycoind:piggycoind --name piggyelectrum teampiggycoin/piggyelectrum-server
 
 Notes:
 
-This connects by default to the dockerized teampiggycoin/piggycoind container if running on the same host (host-named piggycoind)
+This connects by default to the dockerized teampiggycoin/piggycoind container if running on the same host (host-named piggycoind). Do not forget to add the assigned docker IP address of this container to the newpiggycoin.conf of the piggycoind container to allow RPC.
