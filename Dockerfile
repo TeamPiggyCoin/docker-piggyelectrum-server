@@ -1,6 +1,6 @@
 #BUILDS teampiggycoin/piggyelectrum-server
 
-FROM qlustor/alpine-runit
+FROM qlustor/alpine-runit:3.3
 MAINTAINER Team PiggyCoin <team@piggy-coin.com>
 
 # Install Python 2.x
